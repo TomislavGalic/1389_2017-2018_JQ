@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+//JQUERY kod ovdje
+$(document).ready(function(){
+$('p').slice(1).hide();
+
+$(".btn2").click(function(){
+var p=$("p:visible:first");
+if($("p:visible:first").attr('id')=="three"){$("p").first().show();p.hide();return;}
+$(p).next().show();
+p.hide();
+});
+
+$(".btn1").click(function(){
+var p=$("p:visible:last");
+if($("p:visible:last").attr('id')=="one"){$("p").last().show(); p.hide();return;}
+var p=$("p:visible:last");
+$(p).prev().show();
+p.hide();
+});
+});
+</script>
+</head>
+<body>
+
+<p id="one">This is a paragraph 1.</p>
+<p id="two">This is a paragraph 2.</p>
+<p id="three">This is a paragraph 3.</p>
+
+<button class="btn1">Previous</button>
+<button class="btn2">Next</button>
+
+</body>
+</html>

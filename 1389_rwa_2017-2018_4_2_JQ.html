@@ -1,0 +1,58 @@
+﻿
+<html>
+<head></head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
+<script>
+$(document).ready(function(){
+ $("#tekst").click(function(){
+ var table=document.createElement('table');
+ table.id="tabi";
+ table.border="5px";
+// var content="<table border=\"5px\">";
+var i=0,j;
+	var brojRedaka= parseInt($("#1").val());
+	var brojStupaca= parseInt($("#2").val())+1;
+	
+     for ( i=0;i<brojRedaka;i++){
+	 //content+="<tr>";
+	table.insertRow(i);
+	 for(j=0;j<brojStupaca-1;j++){
+	 // content+="<td>" + i+""+j+"</td>";
+	 table.rows[i].insertCell(j).innerHTML=(i)+""+j;;
+	 }
+	 table.rows[i].insertCell(brojStupaca-1).innerHTML="<button id=\"dugme\" value="+i+"></button>";
+	 table.rows[i].cells[brojStupaca-1].val=i;
+	 //content+="</tr>";
+	 //content+="\n";
+	}
+	//content+="</table>";
+	//console.log(content);
+	//$("#tabi").append(content);
+	
+	document.body.appendChild(table);
+	$("td:odd").css("background-color","red");
+
+		$("table button").click(function(){
+ $(this).parent().parent().remove();
+});
+
+
+});
+});
+
+</script>
+<form>
+Broj redaka : <input type="text" id = "1" ></input><br /> <br />
+Broj stupaca : <input type="text" id = "2" ></input><br /> <br />
+<!-- <button type="button" id="dugme" >Potvrdi</button><br /> <br />	-->
+<p id="tekst">KlikniMe</p>
+</form>
+<!--	<div id="tabi" align="center" width="400px" height="400px"></div>	-->
+
+
+
+</div>
+</body>
+
+</html>

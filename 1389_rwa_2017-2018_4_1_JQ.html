@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<title>jQuery DIV plus Buttons</title>
+<style type="text/css">
+    .prvistil{
+    position:relative;
+    width:100px;
+    height:100px;
+    background-color:red;
+	margin:5px;
+	}
+	.drugistil{
+    position:relative;
+    width:100px;
+    height:100px;
+    background-color:blue;
+	margin:5px;
+	}
+	.trecistil{
+    position:relative;
+    width:100px;
+    height:100px;
+    background-color:green;
+	margin:5px;
+	}
+	.cetvrtistil{
+    position:relative;
+    width:100px;
+    height:100px;
+    background-color:yellow;
+	margin:5px;
+	}
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+//$("#dva").hide();
+	//ovdje napisati jQuery kod
+	$("#one").click(function(){
+	$("#jedan").hide();
+	
+	});
+	$("#two").click(function(){
+		$("#dva").show();
+		});
+	$("#three").click(function(){
+	$("#tri").css("background-color","orange");
+	});
+	
+		$("#four").click(function(){
+	     var paragraf=document.createElement("p");
+		 $(paragraf).text("ovo je paragraf u cetvrtom kvadratu ");
+		 $("#cetiri").append(paragraf);
+	});
+
+});
+</script>
+</head>
+<body>
+    <div>
+        <input type="button" name="b1" id="one" value="one">
+        <input type="button" name="b2" id="two" value="two"> 
+        <input type="button" name="b3" id="three" value="three"> 
+		<input type="button" name="b4" id="four" value="four"> 
+    </div>
+    <div id="jedan" class="prvistil">Prvi kvadrat</div>
+    <div id="dva" class="drugistil">Drugi kvadrat</div>
+	<div id="tri" class="trecistil">Treći kvadrat</div>
+	<div id="cetiri" class="cetvrtistil">Četvrti kvadrat</div>
+</body>
+</html>                                		

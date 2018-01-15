@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>mouse over hover jQuery</title>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<style type="text/css">
+    p{
+        padding: 20px;
+        font: 20px sans-serif;
+        background: #f2f2f2;
+    }
+    p.highlight{
+        background: yellow;
+    }
+</style>
+<script type="text/javascript">
+//Jquery kod ovdje
+$(document).ready(
+function(){
+ $("p").hover(
+ function(){
+   $(this).addClass("highlight");
+   },
+   
+   
+   function(){
+   $(this).removeClass("highlight");
+ });
+ 
+});
+</script>
+</head>
+<body>
+    <p>Pređi pokazivačem preko ovog paragrafa.</p>
+    <p>Pređi pokazivačem preko ovog paragrafa.</p>
+    <p>Pređi pokazivačem preko ovog paragrafa.</p>
+</body>
+</html>                                		
